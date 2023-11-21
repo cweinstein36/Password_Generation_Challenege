@@ -9,7 +9,7 @@ var spCharArray = ["+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^",
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
 function writePassword() {
   var correctPrompts = getPrompts(); //true or false
   var passwordText = document.querySelector("#password");
@@ -21,6 +21,15 @@ function writePassword() {
   passwordText.value = "";
 }
 
+}
+
+function generatePassword() {
+var password ="";
+for(var i = 0; i < pswdLength; i++) {
+  var randomIndex = Math.floor(Math.random() * pswdArray.length);
+  password = password + pswdArray[randomIndex];
+}
+return password;
 }
 
 // Add event listener to generate button
