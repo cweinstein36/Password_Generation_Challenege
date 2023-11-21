@@ -11,10 +11,15 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var correctPrompts = getPrompts(); //true or false
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  if(corectPrompts) {
+    var randomPassword = generatePassword()
+    passwordText.value = randomPassword;
+  } else{
+  passwordText.value = "";
+}
 
 }
 
