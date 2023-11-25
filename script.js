@@ -1,17 +1,14 @@
 // Assignment Code
 
-// global variables
 var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 var upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 var lower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var spec = ["!", "@", "#", "$", "%", "&", "*", "+"]
 var randomChar = []; 
 
-
 // generate password function
 var generatePassword = function () {
 
-  // character length prompt
   var charLength = prompt('Please enter length of password; enter a number between "8" and "128".');
 
   if (charLength < 8 || charLength > 128) {
