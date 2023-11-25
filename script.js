@@ -24,7 +24,7 @@ var upperCaseLtrArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N'
 var spCharArray = ["+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^",
 "~", "*", "?", ">", "<", "@", "#", "$", "%"];
 
-function getPrompts() {
+function generatePassword() {
   pswdArray = [];
 
   pswdLength = parseInt (prompt("How many characters do you want the password to be?"));
@@ -49,8 +49,8 @@ function getPrompts() {
   if (confirm("Do you want numbers in your password?")) {
     pswdArray = pswdArray.concat(numberArray);
   }
-  return true;
 }
+
 console.log(passArray);
 var word ="";
 console.log(lengths)
