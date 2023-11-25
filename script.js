@@ -24,36 +24,25 @@ var upperCaseLtrArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N'
 var spCharArray = ["+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^",
 "~", "*", "?", ">", "<", "@", "#", "$", "%"];
 
-function generatePassword() {
-  pswdArray = [];
-
-  pswdLength = parseInt (prompt("How many characters do you want the password to be?"));
-
-  if(isNaN(pswdLength) || pswdLength <8 || pswdLength > 128) {
-    alert("Character length has to be a number, 8 - 128 digits. Please try again.");
-    return false;
-  }
-
-  if (confirm("Do you want lowercase letters in your password?")) {
-    pswdArray = pswdArray.concat(lowerCaseLtrArray);
-  }
-
-  if (confirm("Do you want uppercase letters in your password?")) {
-    pswdArray = pswdArray.concat(upperCaseLtrArray);
-  }
-
-  if (confirm("Do you want special characters in your password?")) {
-    pswdArray = pswdArray.concat(spCharArray);
-  }
-
-  if (confirm("Do you want numbers in your password?")) {
-    pswdArray = pswdArray.concat(numberArray);
-  }
+var lengths = prompt("How many characters would you like the password to contain");
+console.log(length)
+if (!lengths || isNaN(lengths) == true ) {
+  alert("please enter a numeric value");
+  generatePassword()
 }
-
-console.log(passArray);
-var word ="";
-console.log(lengths)
-for (let index = 0; index < lengths; index++) {
-      word += passArray [Math.floor(Math.random() * passArray.length)];
+else if (lengths < 8 || lengths >128) {
+  alert("Password length must be between 8 and 128 characters!");
+  generatePassword()
 }
+else {
+
+var useSpecial = confirm("Do you want special characters?");
+
+var useNumb = confirm( "Do you want numbers?");
+
+var useLower = confirm( "Do you want lowercase letters?");
+
+var useUpper = confirm("Do you waant uppercase letters?");
+
+
+
