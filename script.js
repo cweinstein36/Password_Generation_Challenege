@@ -24,6 +24,7 @@ var upperCaseLtrArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N'
 var spCharArray = ["+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^",
 "~", "*", "?", ">", "<", "@", "#", "$", "%"];
 
+// My code
 var lengths = prompt("How many characters would you like the password to contain");
 console.log(length)
 if (!lengths || isNaN(lengths) == true ) {
@@ -45,4 +46,27 @@ var useLower = confirm( "Do you want lowercase letters?");
 var useUpper = confirm("Do you waant uppercase letters?");
 
 
+//Password Options Array
+var passArray = []
 
+if (useSpecial) {
+  passArray = passArray.concat(specialChars);
+}
+if (useNumb) {
+  passArray = passArray.concat(numbersChars);
+}
+if (useLower) {
+  passArray = passArray.concat(uppercase)
+}
+console.log(passArray);
+var word ="";
+console.log(lengths)
+for (let index =0; index < lengths; index++) {
+
+  //random values from passArray
+  word +=passArray[Math.floor(Math.random() * passArray.length)];
+
+}
+return word;
+}
+ 
