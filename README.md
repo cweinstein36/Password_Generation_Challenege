@@ -21,6 +21,26 @@ https://cweinstein36.github.io/Password_Generation_Challenege/
 
 ## Screenshots 
 
+Deployed application screenshots are as follows:
+
+
+![alt text](assets/screenshots/Start%20Page%20Screenshot.png)
+
+
+![alt text](assets/screenshots/How%20many%20characters%20screenshot.png)
+
+
+![alt text](assets/screenshots/Lowercase%20letters%20screenshot.png)
+
+
+![alt text](assets/screenshots/Uppercase%20letters%20screenshot.png)
+
+
+![alt text](assets/screenshots/Numbers%20screenshot.png)
+
+![alt text](assets/screenshots/End%20page%20Screenshot.png)
+
+
 ## MIT License
 MIT License
 
